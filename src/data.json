@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "product": "Consider the Raven Reverb",
+    "brand": "MS Effects",
+    "category": "Reverb"
+  },
+  {
+    "id": 2,
+    "product": "Samson Buffer",
+    "brand": "MS Effects",
+    "category": "Buffer"
+  },
+  {
+    "id": 3,
+    "product": "Tree of Life Overdrive",
+    "brand": "MS Effects",
+    "category": "Overdrive"
+  },
+  {
+    "id": 4,
+    "product": "Zacchaeus Clean Boost",
+    "brand": "MS Effects",
+    "category": "Boost"
+  },
+  {
+    "id": 5,
+    "product": "Corona Mini Chorus",
+    "brand": "TC Electronic",
+    "category": "Chorus"
+  },
+  {
+    "id": 6,
+    "product": "Hall of Fame Mini",
+    "brand": "TC Electronic",
+    "category": "Reverb"
+  },
+  {
+    "id": 7,
+    "product": "Shaker Mini Vibrato",
+    "brand": "TC Electronic",
+    "category": "Vibrato"
+  },
+  {
+    "id": 8,
+    "product": "Spark Mini Booster",
+    "brand": "TC Electronic",
+    "category": "Boost"
+  }
+]
