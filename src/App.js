@@ -1,9 +1,10 @@
 import "./App.css";
+import Navbar from "./Components/Navbar";
 
 export default function App() {
   return (
     <>
-      <h1>Ecommerce Website</h1>
+      <Navbar />
     </>
   );
 }
