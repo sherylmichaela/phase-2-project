@@ -4,10 +4,10 @@ import Col from "react-bootstrap/Col";
 
 export default function ProductList({ products }) {
   return (
-    <Row>
+    <Row md={4} className="g-5">
       {products.map((product) => {
         return (
-          <Col sm={3}>
+          <Col>
             <ProductCard
               id={product.id}
               image={product.image}

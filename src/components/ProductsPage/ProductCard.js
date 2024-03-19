@@ -1,8 +1,9 @@
 import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 
 export default function ProductCard({ id, image, name, price }) {
   return (
-    <Card>
+    <Card className="text-center">
       <Card.Body>
         <Card.Img
           src={image}
@@ -11,11 +12,15 @@ export default function ProductCard({ id, image, name, price }) {
             aspectRatio: "1/1",
           }}
         />
-        <Card.Title>{name}</Card.Title>
-        <Card.Subtitle>{"$" + price}</Card.Subtitle>
-        <button type="button" className="btn btn-primary">
+        <Card.Title style={{ marginTop: 5, marginBottom: 10 }}>
+          {name}
+        </Card.Title>
+        <Card.Subtitle style={{ marginBottom: 10 }}>
+          {"$" + price}
+        </Card.Subtitle>
+        <Button variant="primary" style={{ marginBottom: 5 }}>
           Add to Cart
-        </button>
+        </Button>
       </Card.Body>
     </Card>
   );
