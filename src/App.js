@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Index from "./components/Index";
 import Home from "./components/Home";
-import ProductsPage from "./components/ProductsPage/ProductsPage";
+import ProductPage from "./components/ProductsPage/ProductPage";
 import Contact from "./components/Contact";
 
 export default function App() {
@@ -12,7 +12,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Index />}>
             <Route index element={<Home />} />
-            <Route path="products" element={<ProductsPage />} />
+            <Route path="products" element={<ProductPage />} />
             <Route path="contact" element={<Contact />} />
           </Route>
         </Routes>
