@@ -1,0 +1,67 @@
+const products = [
+  {
+    id: 1,
+    name: "Consider the Raven Reverb",
+    image: "./Assets/product1.png",
+    brand: "MS Effects",
+    category: "Reverb",
+    price: 200,
+  },
+  {
+    id: 2,
+    name: "Samson Buffer",
+    image: "./Assets/product2.png",
+    brand: "MS Effects",
+    category: "Buffer",
+    price: 50,
+  },
+  {
+    id: 3,
+    name: "Tree of Life Overdrive",
+    image: "./Assets/product3.png",
+    brand: "MS Effects",
+    category: "Overdrive",
+    price: 250,
+  },
+  {
+    id: 4,
+    name: "Zacchaeus Clean Boost",
+    image: "./Assets/product4.png",
+    brand: "MS Effects",
+    category: "Boost",
+    price: 150,
+  },
+  {
+    id: 5,
+    name: "Corona Mini Chorus",
+    image: "./Assets/product5.png",
+    brand: "TC Electronic",
+    category: "Chorus",
+  },
+  {
+    id: 6,
+    name: "Hall of Fame Mini",
+    image: "./Assets/product6.png",
+    brand: "TC Electronic",
+    category: "Reverb",
+    price: 100,
+  },
+  {
+    id: 7,
+    name: "Shaker Mini Vibrato",
+    image: "./Assets/product7.png",
+    brand: "TC Electronic",
+    category: "Vibrato",
+    price: 90,
+  },
+  {
+    id: 8,
+    name: "Spark Mini Booster",
+    image: "./Assets/product8.png",
+    brand: "TC Electronic",
+    category: "Boost",
+    price: 100,
+  },
+];
+
+export { products };

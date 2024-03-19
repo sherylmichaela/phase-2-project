@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Index from "./components/Index";
 import Home from "./components/Home";
-import Products from "./components/Products";
+import Products from "./components/ProductsPage/Products";
 import Contact from "./components/Contact";
 
 export default function App() {
@@ -17,6 +17,7 @@ export default function App() {
           </Route>
         </Routes>
       </Router>
+      <Products />
     </>
   );
 }
