@@ -46,6 +46,7 @@ const products = [
     image: product5,
     brand: "TC Electronic",
     category: "Chorus",
+    price: 90,
   },
   {
     id: 6,
