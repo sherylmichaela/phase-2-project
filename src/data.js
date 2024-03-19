@@ -1,8 +1,17 @@
+import product1 from "./assets/product1.jpg";
+import product2 from "./assets/product2.jpg";
+import product3 from "./assets/product3.jpg";
+import product4 from "./assets/product4.jpg";
+import product5 from "./assets/product5.jpg";
+import product6 from "./assets/product6.jpg";
+import product7 from "./assets/product7.jpg";
+import product8 from "./assets/product8.jpg";
+
 const products = [
   {
     id: 1,
     name: "Consider the Raven Reverb",
-    image: "./Assets/product1.png",
+    image: product1,
     brand: "MS Effects",
     category: "Reverb",
     price: 200,
@@ -10,7 +19,7 @@ const products = [
   {
     id: 2,
     name: "Samson Buffer",
-    image: "./Assets/product2.png",
+    image: product2,
     brand: "MS Effects",
     category: "Buffer",
     price: 50,
@@ -18,7 +27,7 @@ const products = [
   {
     id: 3,
     name: "Tree of Life Overdrive",
-    image: "./Assets/product3.png",
+    image: product3,
     brand: "MS Effects",
     category: "Overdrive",
     price: 250,
@@ -26,7 +35,7 @@ const products = [
   {
     id: 4,
     name: "Zacchaeus Clean Boost",
-    image: "./Assets/product4.png",
+    image: product4,
     brand: "MS Effects",
     category: "Boost",
     price: 150,
@@ -34,14 +43,14 @@ const products = [
   {
     id: 5,
     name: "Corona Mini Chorus",
-    image: "./Assets/product5.png",
+    image: product5,
     brand: "TC Electronic",
     category: "Chorus",
   },
   {
     id: 6,
     name: "Hall of Fame Mini",
-    image: "./Assets/product6.png",
+    image: product6,
     brand: "TC Electronic",
     category: "Reverb",
     price: 100,
@@ -49,7 +58,7 @@ const products = [
   {
     id: 7,
     name: "Shaker Mini Vibrato",
-    image: "./Assets/product7.png",
+    image: product7,
     brand: "TC Electronic",
     category: "Vibrato",
     price: 90,
@@ -57,7 +66,7 @@ const products = [
   {
     id: 8,
     name: "Spark Mini Booster",
-    image: "./Assets/product8.png",
+    image: product8,
     brand: "TC Electronic",
     category: "Boost",
     price: 100,

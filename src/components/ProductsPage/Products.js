@@ -7,6 +7,7 @@ export default function Products({ products }) {
         return (
           <ProductCard
             id={product.id}
+            image={product.image}
             name={product.name}
             price={product.price}
           />
