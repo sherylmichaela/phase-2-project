@@ -21,11 +21,7 @@ export default function ProductCard({ id, image, name, price, product }) {
       setButtonDisabled(false);
     }, 1000);
 
-    // Cart
-    const addItem = () => {
-      addItem(product);
-    };
-    return addItem;
+    return addItem(product);
   };
 
   return (
