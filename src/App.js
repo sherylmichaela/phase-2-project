@@ -4,6 +4,7 @@ import Index from "./components/Index";
 import Home from "./components/Home";
 import ProductPage from "./components/ProductsPage/ProductPage";
 import Contact from "./components/Contact";
+import Cart from "./components/Cart";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
             <Route index element={<Home />} />
             <Route path="products" element={<ProductPage />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="cart" element={<Cart />} />
           </Route>
         </Routes>
       </Router>

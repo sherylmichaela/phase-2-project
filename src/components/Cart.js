@@ -1,8 +1,12 @@
-import { useState } from "react";
-import { products } from "../data.js";
+// import { useState } from "react";
+// import { products } from "../data.js";
 
-export default function Products() {
-  const [addedItems, setAddedItems] = useState([]);
+export default function Cart() {
+  // const [addedItems, setAddedItems] = useState([]);
 
-  return <></>;
+  return (
+    <>
+      <h1>Cart Test</h1>
+    </>
+  );
 }
