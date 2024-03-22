@@ -1,3 +1,9 @@
+import Container from "react-bootstrap/Container";
+
 export default function Contact() {
-  return <h1>Contact form</h1>;
+  return (
+    <Container>
+      <h1 style={{ marginTop: 100 }}>Contact form</h1>
+    </Container>
+  );
 }

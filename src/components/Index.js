@@ -7,7 +7,7 @@ import { Outlet } from "react-router-dom";
 export default function Index() {
   return (
     <>
-      <Navbar expand="lg" className="bg-body-tertiary">
+      <Navbar fixed="top" expand="lg" className="bg-body-tertiary">
         <Container>
           <Navbar.Brand href="#home">Sheryl's Shop</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
