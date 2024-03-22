@@ -1,12 +1,15 @@
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
+import { useCart } from "react-use-cart";
 
-export default function ProductCard({ id, image, name, price }) {
+export default function ProductCard({ id, image, name, price, product }) {
   const [buttonText, setButtonText] = useState("Add To Cart");
   const [buttonDisabled, setButtonDisabled] = useState(false);
+  const { addItem } = useCart();
 
   const handleClick = () => {
+    // Changing button text and state when clicked
     setButtonText("Added to Cart!");
     setButtonDisabled(true);
 
@@ -17,6 +20,12 @@ export default function ProductCard({ id, image, name, price }) {
     setTimeout(() => {
       setButtonDisabled(false);
     }, 1000);
+
+    // Cart
+    const addItem = () => {
+      addItem(product);
+    };
+    return addItem;
   };
 
   return (

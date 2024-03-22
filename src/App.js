@@ -5,20 +5,23 @@ import Home from "./components/Home";
 import ProductPage from "./components/ProductsPage/ProductPage";
 import Contact from "./components/Contact";
 import Cart from "./components/Cart";
+import { CartProvider } from "react-use-cart";
 
 export default function App() {
   return (
     <>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Index />}>
-            <Route index element={<Home />} />
-            <Route path="products" element={<ProductPage />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="cart" element={<Cart />} />
-          </Route>
-        </Routes>
-      </Router>
+      <CartProvider>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Index />}>
+              <Route index element={<Home />} />
+              <Route path="products" element={<ProductPage />} />
+              <Route path="contact" element={<Contact />} />
+              <Route path="cart" element={<Cart />} />
+            </Route>
+          </Routes>
+        </Router>
+      </CartProvider>
     </>
   );
 }
