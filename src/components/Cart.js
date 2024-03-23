@@ -73,6 +73,7 @@ export default function Cart() {
                     value={item.quantity}
                     style={{ width: "50px" }}
                     className="d-inline-block text-center"
+                    disabled
                     readOnly
                   />
 
