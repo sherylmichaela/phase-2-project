@@ -3,8 +3,17 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { useState } from "react";
 
 export default function Contact() {
+  const [submitText, setSubmitText] = useState("Submit");
+  const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
+
+  const handleSubmit = () => {
+    setSubmitText("Form submitted!");
+    setSubmitButtonDisabled(true);
+  };
+
   return (
     <Container>
       <h1 style={{ marginTop: 100, marginBottom: 50, textAlign: "center" }}>
@@ -72,8 +81,10 @@ export default function Contact() {
                 type="submit"
                 size="lg"
                 style={{ marginTop: 25 }}
+                disabled={submitButtonDisabled}
+                onClick={handleSubmit}
               >
-                Submit
+                {submitText}
               </Button>
             </div>
           </Form>
