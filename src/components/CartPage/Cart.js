@@ -9,12 +9,12 @@ export default function Cart() {
     isEmpty,
     totalItems,
     items,
+    cartTotal,
     updateItemQuantity,
     removeItem,
     emptyCart,
   } = useCart();
 
-  const { cartTotal } = useCart();
   // console.log(items);
 
   if (isEmpty)
@@ -107,12 +107,13 @@ export default function Cart() {
         <h2>Total: ${cartTotal}</h2>
         <br />
         <Button
-          className="btn btn-danger mx-3 py-2"
+          className="btn btn-danger mx-3 mb-3 py-2"
           onClick={() => emptyCart()}
         >
           Clear Cart
         </Button>
-        <Button className="btn btn-primary py-2">Click to Checkout</Button>
+
+        <Button className="btn btn-primary mb-3 py-2">Click to Checkout</Button>
       </div>
     </Container>
   );

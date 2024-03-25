@@ -15,9 +15,24 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Index />}>
               <Route index element={<Home />} />
-              <Route path="products" element={<ProductPage />} />
+              <Route path="products" element={<ProductPage />}></Route>
               <Route path="contact" element={<Contact />} />
               <Route path="cart" element={<Cart />} />
+              <Route
+                path="*"
+                element={
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      height: "100%",
+                    }}
+                  >
+                    <h2>Oops, wrong page!</h2>
+                  </div>
+                }
+              />
             </Route>
           </Routes>
         </Router>

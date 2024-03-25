@@ -1,4 +1,3 @@
-import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -6,91 +5,87 @@ import Col from "react-bootstrap/Col";
 import { useState } from "react";
 
 export default function Contact() {
+  const [validated, setValidated] = useState(false);
   const [submitText, setSubmitText] = useState("Submit");
   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
 
-  const handleSubmit = () => {
-    setSubmitText("Form submitted!");
-    setSubmitButtonDisabled(true);
+  const handleSubmit = (e) => {
+    const form = e.currentTarget;
+    e.preventDefault();
+    if (form.checkValidity() === false) {
+      e.stopPropagation();
+    }
+    setValidated(true);
+    // setSubmitText("Form submitted!");
+    // setSubmitButtonDisabled(true);
   };
 
   return (
-    <Container>
-      <h1 style={{ marginTop: 100, marginBottom: 50, textAlign: "center" }}>
-        Contact Form
-      </h1>
-      <Row>
-        <Col sm={3}></Col>
-        <Col sm={6} style={{ alignContent: "center" }}>
-          <Form>
-            <Form.Group as={Row} className="mb-3">
-              <Form.Label column sm="2">
-                Name:
-              </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="John Doe" />
-              </Col>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100%",
+      }}
+    >
+      <Col sm={4}>
+        <h1 style={{ marginBottom: 50, textAlign: "center" }}>Contact Form</h1>
+        <Form noValidate validated={validated} onSubmit={handleSubmit}>
+          <Row className="mb-3">
+            <Form.Group as={Col} md="6" controlId="validationCustom01">
+              <Form.Label>First Name*</Form.Label>
+              <Form.Control required type="text" placeholder="John" />
+              {/* <Form.Control.Feedback type="invalid"></Form.Control.Feedback> */}
             </Form.Group>
-
-            <Form.Group
-              as={Row}
-              className="mb-3"
-              controlId="formPlaintextPassword"
+            <Form.Group as={Col} md="6" controlId="validationCustom02">
+              <Form.Label>Last Name*</Form.Label>
+              <Form.Control required type="text" placeholder="Doe" />
+              {/* <Form.Control.Feedback type="invalid">Looks good!</Form.Control.Feedback> */}
+            </Form.Group>
+          </Row>
+          <Row className="mb-3">
+            <Form.Group as={Col} md="6" controlId="validationCustom03">
+              <Form.Label>Email*</Form.Label>
+              <Form.Control
+                type="email"
+                placeholder="johndoe@mail.com"
+                required
+              />
+              <Form.Control.Feedback type="invalid">
+                Please provide a valid email address.
+              </Form.Control.Feedback>
+            </Form.Group>
+            <Form.Group as={Col} md="6">
+              <Form.Label>Mobile</Form.Label>
+              <Form.Control type="text" placeholder="0412 345 678" />
+            </Form.Group>
+          </Row>
+          <Row className="mb-3">
+            <Form.Group as={Col} md="12" controlId="validationCustom04">
+              <Form.Label>Enquiry*</Form.Label>
+              <Form.Control
+                as="textarea"
+                rows={6}
+                type="text"
+                placeholder="Please type in your enquiry here"
+                required
+              />
+              <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
+            </Form.Group>
+          </Row>
+          <div className="text-center d-grid gap-2">
+            <Button
+              type="submit"
+              className="mt-3"
+              size="lg"
+              disabled={submitButtonDisabled}
             >
-              <Form.Label column sm="2">
-                Email:
-              </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="john@email.com" />
-              </Col>
-            </Form.Group>
-
-            <Form.Group
-              as={Row}
-              className="mb-3"
-              controlId="formPlaintextPassword"
-            >
-              <Form.Label column sm="2">
-                Contact:
-              </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="0412 345 678" />
-              </Col>
-            </Form.Group>
-
-            <Form.Group
-              as={Row}
-              className="mb-3"
-              controlId="formPlaintextPassword"
-            >
-              <Form.Label column sm="2">
-                Enquiry:
-              </Form.Label>
-              <Col sm="10">
-                <Form.Control
-                  as="textarea"
-                  rows={6}
-                  type="text"
-                  placeholder="Please type in your enquiry here"
-                />
-              </Col>
-            </Form.Group>
-            <div className="text-center d-grid gap-2">
-              <Button
-                variant="primary"
-                type="submit"
-                size="lg"
-                style={{ marginTop: 25 }}
-                disabled={submitButtonDisabled}
-                onClick={handleSubmit}
-              >
-                {submitText}
-              </Button>
-            </div>
-          </Form>
-        </Col>
-        <Col sm={3}></Col>
-      </Row>
-    </Container>
+              {submitText}
+            </Button>
+          </div>
+        </Form>
+      </Col>
+    </div>
   );
 }
