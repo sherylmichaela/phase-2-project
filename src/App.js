@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Index from "./components/Index";
 import Home from "./components/Home";
 import ProductPage from "./components/ProductsPage/ProductPage";
-import Contact from "./components/Contact";
-import Cart from "./components/Cart";
+import Contact from "./components/ContactPage/Contact";
+import Cart from "./components/CartPage/Cart";
 import { CartProvider } from "react-use-cart";
 
 export default function App() {

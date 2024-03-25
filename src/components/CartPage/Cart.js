@@ -12,6 +12,7 @@ export default function Cart() {
     useCart();
 
   const { cartTotal } = useCart();
+  // console.log(items);
 
   if (isEmpty)
     return (
