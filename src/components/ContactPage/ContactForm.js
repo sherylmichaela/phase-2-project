@@ -6,8 +6,8 @@ import { useState } from "react";
 
 export default function Contact() {
   const [validated, setValidated] = useState(false);
-  const [submitText, setSubmitText] = useState("Submit");
-  const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
+  // const [submitText, setSubmitText] = useState("Submit");
+  // const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
 
   const handleSubmit = (e) => {
     const form = e.currentTarget;
@@ -33,19 +33,19 @@ export default function Contact() {
         <h1 style={{ marginBottom: 50, textAlign: "center" }}>Contact Form</h1>
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
           <Row className="mb-3">
-            <Form.Group as={Col} md="6" controlId="validationCustom01">
+            <Form.Group as={Col} md="6">
               <Form.Label>First Name*</Form.Label>
               <Form.Control required type="text" placeholder="John" />
               {/* <Form.Control.Feedback type="invalid"></Form.Control.Feedback> */}
             </Form.Group>
-            <Form.Group as={Col} md="6" controlId="validationCustom02">
+            <Form.Group as={Col} md="6">
               <Form.Label>Last Name*</Form.Label>
               <Form.Control required type="text" placeholder="Doe" />
               {/* <Form.Control.Feedback type="invalid">Looks good!</Form.Control.Feedback> */}
             </Form.Group>
           </Row>
           <Row className="mb-3">
-            <Form.Group as={Col} md="6" controlId="validationCustom03">
+            <Form.Group as={Col} md="6">
               <Form.Label>Email*</Form.Label>
               <Form.Control
                 type="email"
@@ -58,17 +58,31 @@ export default function Contact() {
             </Form.Group>
             <Form.Group as={Col} md="6">
               <Form.Label>Mobile</Form.Label>
-              <Form.Control type="text" placeholder="0412 345 678" />
+              <Form.Control type="text" placeholder="0412 345 678" required />
             </Form.Group>
           </Row>
           <Row className="mb-3">
-            <Form.Group as={Col} md="12" controlId="validationCustom04">
+            <Form.Group as={Col} md="12">
+              <Form.Label>Subject*</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Product Availability"
+                required
+              />
+              <Form.Control.Feedback type="invalid">
+                Please provide a subject.
+              </Form.Control.Feedback>
+            </Form.Group>
+          </Row>
+          <Row className="mb-3">
+            <Form.Group as={Col} md="12">
               <Form.Label>Enquiry*</Form.Label>
               <Form.Control
                 as="textarea"
                 rows={6}
                 type="text"
                 placeholder="Please type in your enquiry here"
+                maxLength={400}
                 required
               />
               <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
@@ -77,14 +91,19 @@ export default function Contact() {
           <div className="text-center d-grid gap-2">
             <Button
               type="submit"
-              className="mt-3"
+              className="mt-3 mb-3"
               size="lg"
-              disabled={submitButtonDisabled}
+              // disabled={submitButtonDisabled}
             >
-              {submitText}
+              Submit
             </Button>
           </div>
         </Form>
+        <div className="text-center d-grid gap-2">
+          <Button type="submit" className="btn btn-warning mb-3" size="lg">
+            Click to view submitted forms
+          </Button>
+        </div>
       </Col>
     </div>
   );

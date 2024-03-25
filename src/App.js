@@ -1,13 +1,25 @@
 import "./App.css";
+import { CartProvider } from "react-use-cart";
+// import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Index from "./components/Index";
 import Home from "./components/Home";
-import ProductPage from "./components/ProductsPage/ProductPage";
-import Contact from "./components/ContactPage/Contact";
+import ProductsIndex from "./components/ProductsPage/ProductsIndex";
+import ProductsMain from "./components/ProductsPage/ProductsMain";
+import ProductDisplay from "./components/ProductsPage/ProductDisplay";
 import Cart from "./components/CartPage/Cart";
-import { CartProvider } from "react-use-cart";
+import ContactForm from "./components/ContactPage/ContactForm";
+// import SubmittedEnquiries from "./components/ContactPage/SubmittedEnquiries";
 
 export default function App() {
+  // const [enquiries, setEnquiries] = useState([]);
+
+  // useEffect(() => {
+  //   fetch("http://localhost:4000/enquiries")
+  //     .then((response) => response.json())
+  //     .then((json) => setEnquiries(json));
+  // }, []);
+
   return (
     <>
       <CartProvider>
@@ -15,8 +27,11 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Index />}>
               <Route index element={<Home />} />
-              <Route path="products" element={<ProductPage />}></Route>
-              <Route path="contact" element={<Contact />} />
+              <Route path="products" element={<ProductsIndex />}>
+                <Route index element={<ProductsMain />} />
+                <Route path=":productId" element={<ProductDisplay />} />
+              </Route>
+              <Route path="contact" element={<ContactForm />}></Route>
               <Route path="cart" element={<Cart />} />
               <Route
                 path="*"
@@ -29,7 +44,7 @@ export default function App() {
                       height: "100%",
                     }}
                   >
-                    <h2>Oops, wrong page!</h2>
+                    <h2>Oops, no page found!</h2>
                   </div>
                 }
               />

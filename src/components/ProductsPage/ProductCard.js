@@ -2,6 +2,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
 import { useCart } from "react-use-cart";
+import { Link } from "react-router-dom";
 
 export default function ProductCard({ id, image, name, price, product }) {
   const [buttonText, setButtonText] = useState("Add To Cart");
@@ -27,13 +28,15 @@ export default function ProductCard({ id, image, name, price, product }) {
   return (
     <Card className="text-center">
       <Card.Body>
-        <Card.Img
-          src={image}
-          style={{
-            width: "150px",
-            aspectRatio: "1/1",
-          }}
-        />
+        <Link to={`/products/${id}`}>
+          <Card.Img
+            src={image}
+            style={{
+              width: "150px",
+              aspectRatio: "1/1",
+            }}
+          />
+        </Link>
         <Card.Title style={{ marginTop: 5, marginBottom: 10 }}>
           {name}
         </Card.Title>

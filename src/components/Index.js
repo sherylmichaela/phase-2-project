@@ -9,7 +9,7 @@ export default function Index() {
     <>
       <Navbar fixed="top" expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="#home">Sheryl's Shop</Navbar.Brand>
+          <Navbar.Brand href="/">Sheryl's Shop</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
