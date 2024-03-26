@@ -8,20 +8,23 @@ export default function ProductDisplay() {
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    const productFound = products.find((product) => product.id === productId);
+    const productFound = products.find(
+      (product) => String(product.id) === productId
+    );
+
     setProduct(productFound);
   }, [productId]);
 
   return (
-    <>
+    <Container>
       {product ? (
-        <Container>
+        <>
           <h4 style={{ marginTop: 100 }}>{product.name}</h4>
           <h3>{product.description}</h3>
-        </Container>
+        </>
       ) : (
         <p style={{ marginTop: 100 }}>Nothing found</p>
       )}
-    </>
+    </Container>
   );
 }
