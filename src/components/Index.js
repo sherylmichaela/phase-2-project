@@ -19,6 +19,9 @@ export default function Index() {
               <LinkContainer to="/products">
                 <Nav.Link>Products</Nav.Link>
               </LinkContainer>
+              <LinkContainer to="/wishlist">
+                <Nav.Link>Wishlist</Nav.Link>
+              </LinkContainer>
               <LinkContainer to="/contact">
                 <Nav.Link>Contact</Nav.Link>
               </LinkContainer>

@@ -15,7 +15,9 @@ export default function Contact() {
     if (form.checkValidity() === false) {
       e.stopPropagation();
     }
+
     setValidated(true);
+
     // setSubmitText("Form submitted!");
     // setSubmitButtonDisabled(true);
   };
@@ -99,11 +101,11 @@ export default function Contact() {
             </Button>
           </div>
         </Form>
-        <div className="text-center d-grid gap-2">
+        {/* <div className="text-center d-grid gap-2">
           <Button type="submit" className="btn btn-warning mb-3" size="lg">
             Click to view submitted forms
           </Button>
-        </div>
+        </div> */}
       </Col>
     </div>
   );

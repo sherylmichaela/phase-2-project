@@ -2,9 +2,9 @@ import ProductCard from "./ProductCard";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-export default function ProductList({ products }) {
+export default function ProductList({ products, updateName }) {
   return (
-    <Row md={4} className="g-5">
+    <Row sm={1} md={2} lg={4} className="g-5">
       {products.map((product, index) => {
         return (
           <Col>
@@ -15,6 +15,7 @@ export default function ProductList({ products }) {
               price={product.price}
               product={product}
               key={index}
+              updateName={updateName}
             />
           </Col>
         );
