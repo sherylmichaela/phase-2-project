@@ -12,7 +12,7 @@ export default function ProductCard({
   name,
   price,
   product,
-  updateName,
+  addToWishlist,
 }) {
   const [buttonText, setButtonText] = useState("Add To Cart");
   const [buttonDisabled, setButtonDisabled] = useState(false);
@@ -48,7 +48,7 @@ export default function ProductCard({
       setShow(false);
     }, 2000);
 
-    updateName(id);
+    addToWishlist(id);
   };
 
   return (
