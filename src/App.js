@@ -25,7 +25,7 @@ export default function App() {
   }, []);
 
   function addToWishlist(id) {
-    const prodInWishList = wishlistItems.find((item) => String(item.id) === id);
+    const prodInWishList = wishlistItems.find((item) => item.id === id);
 
     if (!prodInWishList) {
       fetch("http://localhost:4000/wishlist/", {
@@ -41,6 +41,17 @@ export default function App() {
           setWishlistItems((prev) => [json, ...prev]);
         });
     }
+  }
+
+  function removeFromWishlist(id) {
+    fetch("http://localhost:4000/wishlist/" + id, {
+      method: "DELETE",
+    }).then((response) => {
+      if (response.ok) {
+        const newWishlist = wishlistItems.filter((item) => item.id !== id);
+        setWishlistItems(newWishlist);
+      }
+    });
   }
 
   return (
@@ -59,7 +70,12 @@ export default function App() {
               </Route>
               <Route
                 path="wishlist"
-                element={<Wishlist wishlistItems={wishlistItems} />}
+                element={
+                  <Wishlist
+                    wishlistItems={wishlistItems}
+                    removeFromWishlist={removeFromWishlist}
+                  />
+                }
               />
               <Route path="contact" element={<ContactForm />} />
               <Route path="cart" element={<Cart />} />

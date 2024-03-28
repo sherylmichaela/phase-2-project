@@ -3,7 +3,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import WishlistCard from "./WishlistCard";
 
-export default function Wishlist({ wishlistItems, addToWishlist }) {
+export default function Wishlist({ wishlistItems, removeFromWishlist }) {
   return (
     <>
       {wishlistItems.length > 0 ? (
@@ -21,7 +21,7 @@ export default function Wishlist({ wishlistItems, addToWishlist }) {
                     price={item.price}
                     item={item}
                     key={index}
-                    addToWishlist={addToWishlist}
+                    removeFromWishlist={removeFromWishlist}
                   />
                 </Col>
               );
