@@ -1,3 +1,13 @@
 {
-  "wishlist": []
+  "wishlist": [
+    {
+      "id": 1,
+      "name": "Consider the Raven Reverb",
+      "image": "/static/media/product1.78a1c3cb616effd069fd.jpg",
+      "brand": "MS Effects",
+      "category": "Reverb",
+      "price": 200,
+      "description": "The Consider the Raven Reverb by Mercy Seat Effects comes in a variety of finishes and is based on the 'Box of Hall' circuitry by Culturejam. Its simple circuit and knobs mirror the intuitiveness of this reverb, which falls somewhere between a spring and hall reverb. All that needs adjusting are the Volume and Damp knobs, which effect only the reverb effect and not your guitar's tone."
+    }
+  ]
 }

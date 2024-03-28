@@ -8,7 +8,7 @@ import { products } from "../../data.js";
 import { useCart } from "react-use-cart";
 import "./ProductDisplay.css";
 
-export default function ProductDisplay({ addToWishlist }) {
+export default function ProductDisplay() {
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
 
@@ -37,7 +37,6 @@ export default function ProductDisplay({ addToWishlist }) {
       setButtonDisabled(false);
     }, 1000);
 
-    addToWishlist(product.id);
     return addItem(product);
   };
 
