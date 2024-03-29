@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+## eCommerce Single Page Application Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the source code for an eCommerce Single Page Application (SPA) website. The website is built using modern web development technologies such as React.js for the frontend and Node.js for the backend.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+1. Product Catalog: Browse through a wide range of products conveniently categorized for easy navigation.
 
-### `npm start`
+2. Shopping Cart: Add products to the shopping cart, update quantities, and proceed to checkout seamlessly.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. Wishlist: Add products to a wishlist for future purchase considerations.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+Frontend: React,js, React Router, Bootstrap
+Backend: Node.js
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+To get started with the Activity Generator App, follow these simple steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the Repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone git@github.com:sherylmichaela/phase-2-project-ecommerce-app.git
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Navigate to the Project Directory:
 
-### `npm run eject`
+```bash
+cd phase-2-project-ecommerce-app
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Install dependencies using `npm install` or `yarn install`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. To run the JSON server with `db.json` on port 4000, execute the following command:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+json-server --watch db.json --port 4000
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. Run the frontend and backend servers using `npm start` or `yarn start`.
 
-## Learn More
+## Contribution Guidelines
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Contributions are welcome! Please fork the repository and submit a pull request with your changes.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Issues and Feedback
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you encounter any issues or have feedback, please feel free to open an issue on the GitHub repository.
