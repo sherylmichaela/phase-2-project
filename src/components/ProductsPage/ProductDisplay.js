@@ -1,6 +1,3 @@
-// import Container from "react-bootstrap/Container";
-// import Row from "react-bootstrap/Row";
-// import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -46,7 +43,6 @@ export default function ProductDisplay() {
         <div className="product-page">
           <div className="product-image-container">
             <img src={product.image} alt={product.name} />
-            {/* <img src={product.image} alt="Product Image" /> */}
           </div>
           <div className="product-details">
             <h2>{product.name}</h2>

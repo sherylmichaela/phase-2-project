@@ -3,6 +3,7 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useState } from "react";
+import "./ContactForm.css";
 
 export default function Contact() {
   const [validated, setValidated] = useState(false);
@@ -18,22 +19,17 @@ export default function Contact() {
       setValidated(true);
       setSubmitText("Form submitted!");
       setDisableSubmitBtn(true);
-      console.log("Form submitted!");
+      form.reset();
+
+      // console.log("Form submitted!");
     }
     setValidated(true);
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "100%",
-      }}
-    >
+    <div className="general">
       <Col sm={4}>
-        <h1 style={{ marginBottom: 50, textAlign: "center" }}>Contact Form</h1>
+        <h1 className="contact-form-header">Contact Form</h1>
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
           <Row className="mb-3">
             <Form.Group as={Col} md="6">

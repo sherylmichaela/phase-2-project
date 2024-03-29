@@ -10,24 +10,6 @@
       "description": "The Samson Buffer is an op-amp based signal buffer that eliminates cable capacitance and loss of top end associated with long cable paths or using several unbuffered effects pedals. Its position in the signal chain should be ascertained by experimentation depending on the effects pedals used to optimise your sound."
     },
     {
-      "id": 1,
-      "name": "Consider the Raven Reverb",
-      "image": "/static/media/product1.78a1c3cb616effd069fd.jpg",
-      "brand": "MS Effects",
-      "category": "Reverb",
-      "price": 200,
-      "description": "The Consider the Raven Reverb by Mercy Seat Effects comes in a variety of finishes and is based on the 'Box of Hall' circuitry by Culturejam. Its simple circuit and knobs mirror the intuitiveness of this reverb, which falls somewhere between a spring and hall reverb. All that needs adjusting are the Volume and Damp knobs, which effect only the reverb effect and not your guitar's tone."
-    },
-    {
-      "id": 5,
-      "name": "Corona Mini Chorus",
-      "image": "/static/media/product5.c2752b4bc43b92313bd8.jpg",
-      "brand": "TC Electronic",
-      "category": "Chorus",
-      "price": 90,
-      "description": "From subtle swells to full on Leslie sounds, the classic SCF sound and a huge sounding-trichorus, we've condensed that and infinitely more into a tiny pedal! No matter what your chorus needs may be, you can find just the right sound here - in a pedal that takes up next to no space on your board!"
-    },
-    {
       "id": 6,
       "name": "Hall of Fame Mini",
       "image": "/static/media/product6.0005ddf534a7092f036b.jpg",
@@ -62,15 +44,6 @@
       "category": "Boost",
       "price": 100,
       "description": "Give your music a clean boost with the TC Electronic spark mini booster guitar boost pedal. This pedal gives you 20 decibels of boost for full-bodied sound that still highlights your core tones."
-    },
-    {
-      "id": 4,
-      "name": "Zacchaeus Clean Boost",
-      "image": "/static/media/product4.8fc52cd0648e79571b3b.jpg",
-      "brand": "MS Effects",
-      "category": "Boost",
-      "price": 150,
-      "description": "The tiny but mighty Zacchaeus Clean Boost, by Mercy Seat Effects! This little guy will take your leads to the next (volume) level. Take your amp to 11! All handwired and handmade for the ultimate tone."
     }
   ]
 }

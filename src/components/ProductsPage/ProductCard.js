@@ -5,7 +5,6 @@ import Tooltip from "react-bootstrap/Tooltip";
 import { useState, useRef } from "react";
 import { useCart } from "react-use-cart";
 import { Link } from "react-router-dom";
-import { toBeRequired } from "@testing-library/jest-dom/matchers";
 
 export default function ProductCard({
   id,
@@ -43,7 +42,7 @@ export default function ProductCard({
   };
 
   // Handle Add to Wishlist button
-  const handleShowTooltip = () => {
+  const handleAddToWishlistBtn = () => {
     setShow(true);
 
     // Set a timeout to hide the tooltip after 3 seconds (adjust as needed)
@@ -84,7 +83,7 @@ export default function ProductCard({
           variant="danger"
           style={{ marginLeft: 5 }}
           ref={target}
-          onClick={handleShowTooltip}
+          onClick={handleAddToWishlistBtn}
         >
           {
             <svg

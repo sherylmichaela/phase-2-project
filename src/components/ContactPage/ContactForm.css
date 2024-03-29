@@ -1,0 +1,11 @@
+.general {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.contact-form-header {
+  margin-bottom: 50px;
+  text-align: center;
+}
