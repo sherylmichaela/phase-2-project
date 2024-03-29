@@ -6,20 +6,21 @@ import { useState } from "react";
 
 export default function Contact() {
   const [validated, setValidated] = useState(false);
-  // const [submitText, setSubmitText] = useState("Submit");
-  // const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
+  const [submitText, setSubmitText] = useState("Submit");
+  const [disableSubmitBtn, setDisableSubmitBtn] = useState(false);
 
   const handleSubmit = (e) => {
     const form = e.currentTarget;
     e.preventDefault();
     if (form.checkValidity() === false) {
       e.stopPropagation();
+    } else {
+      setValidated(true);
+      setSubmitText("Form submitted!");
+      setDisableSubmitBtn(true);
+      console.log("Form submitted!");
     }
-
     setValidated(true);
-
-    // setSubmitText("Form submitted!");
-    // setSubmitButtonDisabled(true);
   };
 
   return (
@@ -95,17 +96,12 @@ export default function Contact() {
               type="submit"
               className="mt-3 mb-3"
               size="lg"
-              // disabled={submitButtonDisabled}
+              disabled={disableSubmitBtn}
             >
-              Submit
+              {submitText}
             </Button>
           </div>
         </Form>
-        {/* <div className="text-center d-grid gap-2">
-          <Button type="submit" className="btn btn-warning mb-3" size="lg">
-            Click to view submitted forms
-          </Button>
-        </div> */}
       </Col>
     </div>
   );

@@ -2,7 +2,6 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import WishlistCard from "./WishlistCard";
-import { useState, useEffect } from "react";
 
 export default function Wishlist({
   wishlistItems,

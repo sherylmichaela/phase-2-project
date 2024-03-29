@@ -66,7 +66,12 @@ export default function App() {
               <Route path="products" element={<ProductsIndex />}>
                 <Route
                   index
-                  element={<ProductsMain addToWishlist={addToWishlist} />}
+                  element={
+                    <ProductsMain
+                      addToWishlist={addToWishlist}
+                      wishlistItems={wishlistItems}
+                    />
+                  }
                 />
                 <Route path=":productId" element={<ProductDisplay />} />
               </Route>

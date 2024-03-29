@@ -5,6 +5,7 @@ import Tooltip from "react-bootstrap/Tooltip";
 import { useState, useRef } from "react";
 import { useCart } from "react-use-cart";
 import { Link } from "react-router-dom";
+import { toBeRequired } from "@testing-library/jest-dom/matchers";
 
 export default function ProductCard({
   id,
@@ -14,9 +15,11 @@ export default function ProductCard({
   product,
   addToWishlist,
 }) {
+  const { addItem } = useCart();
+
+  // Setting "Add to Cart" button states
   const [buttonText, setButtonText] = useState("Add To Cart");
   const [buttonDisabled, setButtonDisabled] = useState(false);
-  const { addItem } = useCart();
 
   // State and Ref for heart button
   const [show, setShow] = useState(false);
@@ -39,7 +42,7 @@ export default function ProductCard({
     return addItem(product);
   };
 
-  // Handle Add to Fav button
+  // Handle Add to Wishlist button
   const handleShowTooltip = () => {
     setShow(true);
 
