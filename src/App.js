@@ -15,12 +15,14 @@ import { products } from "./data";
 
 export default function App() {
   const [wishlistItems, setWishlistItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch("http://localhost:4000/wishlist")
       .then((response) => response.json())
       .then((json) => {
         setWishlistItems(json);
+        setIsLoading(false);
       });
   }, []);
 
@@ -72,6 +74,7 @@ export default function App() {
                 path="wishlist"
                 element={
                   <Wishlist
+                    isLoading={isLoading}
                     wishlistItems={wishlistItems}
                     removeFromWishlist={removeFromWishlist}
                   />

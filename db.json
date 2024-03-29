@@ -1,24 +1,6 @@
 {
   "wishlist": [
     {
-      "id": 1,
-      "name": "Consider the Raven Reverb",
-      "image": "/static/media/product1.78a1c3cb616effd069fd.jpg",
-      "brand": "MS Effects",
-      "category": "Reverb",
-      "price": 200,
-      "description": "The Consider the Raven Reverb by Mercy Seat Effects comes in a variety of finishes and is based on the 'Box of Hall' circuitry by Culturejam. Its simple circuit and knobs mirror the intuitiveness of this reverb, which falls somewhere between a spring and hall reverb. All that needs adjusting are the Volume and Damp knobs, which effect only the reverb effect and not your guitar's tone."
-    },
-    {
-      "id": 2,
-      "name": "Samson Buffer",
-      "image": "/static/media/product2.1b2ff5d55d107bdccdd1.jpg",
-      "brand": "MS Effects",
-      "category": "Buffer",
-      "price": 50,
-      "description": "The Samson Buffer is an op-amp based signal buffer that eliminates cable capacitance and loss of top end associated with long cable paths or using several unbuffered effects pedals. Its position in the signal chain should be ascertained by experimentation depending on the effects pedals used to optimise your sound."
-    },
-    {
       "id": 3,
       "name": "Tree of Life Overdrive",
       "image": "/static/media/product3.b261c379090395933a06.jpg",
@@ -35,15 +17,6 @@
       "category": "Reverb",
       "price": 100,
       "description": "They've been on countless records and movies and used by guitarists around the world - rock stars to bedroom shredders all swear by them. That's why Hall of Fame Mini comes pre-loaded with one of the very best; our legendary hall reverb."
-    },
-    {
-      "id": 5,
-      "name": "Corona Mini Chorus",
-      "image": "/static/media/product5.c2752b4bc43b92313bd8.jpg",
-      "brand": "TC Electronic",
-      "category": "Chorus",
-      "price": 90,
-      "description": "From subtle swells to full on Leslie sounds, the classic SCF sound and a huge sounding-trichorus, we've condensed that and infinitely more into a tiny pedal! No matter what your chorus needs may be, you can find just the right sound here - in a pedal that takes up next to no space on your board!"
     }
   ]
 }
