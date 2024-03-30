@@ -19,9 +19,16 @@ export default function Contact() {
       setValidated(true);
       setSubmitText("Form submitted!");
       setDisableSubmitBtn(true);
-      form.reset();
 
       // console.log("Form submitted!");
+
+      // Reset state variables
+      // setTimeout(() => {
+      //   form.reset();
+      //   setValidated(false);
+      //   setSubmitText("Submit");
+      //   setDisableSubmitBtn(false);
+      // }, 100); // Reset after 2 seconds
     }
     setValidated(true);
   };
