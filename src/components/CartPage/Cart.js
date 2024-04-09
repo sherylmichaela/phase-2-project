@@ -2,6 +2,7 @@ import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
 import Form from "react-bootstrap/Form";
+import { useState } from "react";
 import { useCart } from "react-use-cart";
 
 export default function Cart() {
@@ -31,6 +32,10 @@ export default function Cart() {
       </div>
     );
 
+  function handleCheckout() {
+    emptyCart();
+  }
+
   return (
     <Container>
       <h1 style={{ marginTop: 100, marginBottom: 50 }}>Cart ({totalItems})</h1>
@@ -39,10 +44,9 @@ export default function Cart() {
           <tr>
             <th>Product Image</th>
             <th>Product Name</th>
-            <th>Price</th>
-
+            <th>Unit Price</th>
             <th>Quantity</th>
-
+            <th>Total Price</th>
             <th></th>
           </tr>
         </thead>
@@ -89,6 +93,7 @@ export default function Cart() {
                     +
                   </Button>
                 </td>
+                <td>${item.price * item.quantity}</td>
                 <td>
                   <Button
                     variant="danger"
@@ -113,7 +118,9 @@ export default function Cart() {
           Clear Cart
         </Button>
 
-        <Button className="btn btn-primary mb-3 py-2">Click to Checkout</Button>
+        <Button className="btn btn-primary mb-3 py-2" onClick={handleCheckout}>
+          Click to Checkout
+        </Button>
       </div>
     </Container>
   );

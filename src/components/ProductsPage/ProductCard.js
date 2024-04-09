@@ -2,7 +2,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Overlay from "react-bootstrap/Overlay";
 import Tooltip from "react-bootstrap/Tooltip";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useCart } from "react-use-cart";
 import { Link } from "react-router-dom";
 
@@ -52,6 +52,18 @@ export default function ProductCard({
 
     addToWishlist(id);
   };
+
+  useEffect(() => {
+    fetch("http://localhost:4000/wishlist/" + id)
+      .then((response) => response.json())
+      .then((json) => {
+        if (json !== undefined) {
+          console.log(json.id + ": Already in wishlist");
+        } else {
+          console.log("Not added");
+        }
+      });
+  }, []);
 
   return (
     <Card className="text-center">

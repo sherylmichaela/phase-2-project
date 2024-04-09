@@ -9,36 +9,34 @@ export default function Wishlist({
   isLoading,
 }) {
   return (
-    <>
+    <Container>
+      <h1 style={{ marginTop: 100 }}>Wishlist</h1>
+      <br />
       {!isLoading ? (
         <>
           {wishlistItems.length > 0 ? (
-            <Container>
-              <h1 style={{ marginTop: 100 }}>Wishlist Items</h1>
-              <br />
-              <Row sm={1} md={2} lg={4} className="g-5">
-                {wishlistItems.map((item, index) => {
-                  return (
-                    <Col>
-                      <WishlistCard
-                        id={item.id}
-                        image={item.image}
-                        name={item.name}
-                        price={item.price}
-                        item={item}
-                        key={index}
-                        removeFromWishlist={removeFromWishlist}
-                      />
-                    </Col>
-                  );
-                })}
-              </Row>
-            </Container>
+            <Row sm={1} md={2} lg={4} className="g-5">
+              {wishlistItems.map((item, index) => {
+                return (
+                  <Col>
+                    <WishlistCard
+                      id={item.id}
+                      image={item.image}
+                      name={item.name}
+                      price={item.price}
+                      item={item}
+                      key={index}
+                      removeFromWishlist={removeFromWishlist}
+                    />
+                  </Col>
+                );
+              })}
+            </Row>
           ) : (
             <div
               style={{
+                marginTop: 200,
                 display: "flex",
-                alignItems: "center",
                 justifyContent: "center",
                 height: "100%",
               }}
@@ -48,6 +46,6 @@ export default function Wishlist({
           )}
         </>
       ) : null}
-    </>
+    </Container>
   );
 }
